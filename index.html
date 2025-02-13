@@ -27,6 +27,8 @@
     }
     .important-places {
       color: blueviolet;
+
+
     }
   </style>
 
@@ -55,7 +57,7 @@
       </section>
 
       <!-- Video 25-3 -->
-      <section class="fruits-container">
+      <section class="fruits-container" >
         <h1 id="fruits-title">Fruits I like</h1>
         <ul>
           <li>Apple</li>
@@ -146,7 +148,40 @@
 
 
 
-      
+
+
+    // Video 25-5 Start here
+
+    // getAttribute 
+    const placesTitle = document.getElementById("places-title"); 
+    console.log(placesTitle.getAttribute("id"));  
+    console.log(placesTitle.getAttribute("class")); 
+   
+
+    // setAttribute 
+    placesTitle.setAttribute("style", "color: red; font-size: 30px;"); 
+    placesTitle.setAttribute("id", "new-places-title"); 
+
+    // classList 
+
+    const allPlaces = document.getElementsByClassName("important-places");
+    for (const place of allPlaces) {
+        place.classList.add("place");
+        place.classList.remove("important-places");
+    } 
+
+    // innerHTML 
+
+    const fruitsContainer = document.querySelector(".fruits-container"); 
+    console.log(fruitsContainer.innerHTML);
+    fruitsContainer.innerHTML = "<h1>Fruits I love</h1><ul><li>Apple</li><li>Banana</li><li>Orange</li><li>Guava</li></ul>";
+
+
+    // Video 25-5 End here
+
+
+    
+
 
 
 
