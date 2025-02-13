@@ -9,6 +9,8 @@
 
   <link rel="stylesheet" href="./styles/styles.css" />
 
+  <!-- Video 25-1 -->
+
   <style>
     li{
         color: tomato;
@@ -33,6 +35,35 @@
     <script src="./js/25-1_dom.js"></script>
 
     <script>
+
+        // Video 25-2 start here
+        const student = {
+            name: "Jalal Uddin", 
+            Id: 101,
+            study: function(time){
+                console.log(time, "Study hard")
+            }
+        }
+        
+
+        const liCollection = document.getElementsByTagName('li') 
+        console.log(liCollection) ;
+        
+        for(const li of liCollection){
+            // console.log(li)
+            console.log(li.innerText)
+        }
+
+        const allHeadings = document.getElementsByTagName('h1') 
+
+        for(const heading of allHeadings){
+            console.log(heading.innerText)
+        }
+
+        //  Video 25-2 End here
+
+
+        // Video 25-1 
         console.log('Add JavaScript inside HTML File')
     </script>
 
