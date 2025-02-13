@@ -12,11 +12,14 @@
   <!-- Video 25-1 -->
 
   <style>
-    li {
+    /* li {
       color: tomato;
-    }
+    } */
 
-    
+    /* Video 25-4  */
+    .fruits-container {
+      color: red;
+    }
 
     /* Video 25-3 */
     #fruits-title {
@@ -25,7 +28,6 @@
     .important-places {
       color: blueviolet;
     }
-
   </style>
 
   <body>
@@ -53,7 +55,7 @@
       </section>
 
       <!-- Video 25-3 -->
-      <section>
+      <section class="fruits-container">
         <h1 id="fruits-title">Fruits I like</h1>
         <ul>
           <li>Apple</li>
@@ -101,21 +103,51 @@
 
       //  Video 25-2 End here
 
-
-
-
       // Video 25-3 Start here
 
-      const fruitTitle = document.getElementById("fruits-title"); 
+      const fruitTitle = document.getElementById("fruits-title");
 
       fruitTitle.innerText = "Fruits I love";
 
       const places = document.getElementsByClassName("important-places");
       for (const place of places) {
-        console.log(place)
+        console.log(place);
         console.log(place.innerText);
       }
       // Video 25-3 End here
+
+      
+      
+      
+      
+      
+      
+      // Video 25-4 Start here
+
+      // querySelectorAll
+
+      const allLi = document.querySelectorAll(".fruits-container li");
+      console.log(allLi);
+
+      for (const li of allLi) {
+        //   console.log(li);
+        console.log(li.innerText);
+      }
+
+      // querySelector
+
+      const firstLi = document.querySelector(".fruits-container li");
+      console.log(firstLi);
+      console.log(firstLi.innerText);
+
+      // Video 25-4 End here 
+
+
+
+
+
+      
+
 
 
 
