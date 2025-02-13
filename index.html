@@ -12,60 +12,115 @@
   <!-- Video 25-1 -->
 
   <style>
-    li{
-        color: tomato;
+    li {
+      color: tomato;
     }
+
+    
+
+    /* Video 25-3 */
+    #fruits-title {
+      color: green;
+    }
+    .important-places {
+      color: blueviolet;
+    }
+
   </style>
 
   <body>
     <header>
       <h1>Welcome to my DOM</h1>
+
+      <!-- Video 25-3 -->
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. A fugit,
+        asperiores nisi minus minima omnis magnam sequi nobis, dicta nostrum
+        distinctio, exercitationem voluptatum voluptatibus tempora sint ab
+        repudiandae mollitia rem?
+      </p>
     </header>
 
     <main>
-      <h1>My Awesome DOM de baba</h1>
-      <ul>
-        <li>Jalali Set</li>
-        <li>Kawali set</li>
-        <li>bonobash</li>
-        <li>DOM de re baba</li>
-      </ul>
+      <section>
+        <h1>My Awesome DOM de baba</h1>
+        <ul>
+          <li>Jalali Set</li>
+          <li>Kawali set</li>
+          <li>bonobash</li>
+          <li>DOM de re baba</li>
+        </ul>
+      </section>
+
+      <!-- Video 25-3 -->
+      <section>
+        <h1 id="fruits-title">Fruits I like</h1>
+        <ul>
+          <li>Apple</li>
+          <li>Banana</li>
+          <li>Orange</li>
+          <li>Guava</li>
+        </ul>
+      </section>
+
+      <section>
+        <h1 id="places-title">Places I like</h1>
+        <ul>
+          <li class="important-places">Sundarban</li>
+          <li class="important-places">Cox's Bazar</li>
+          <li class="important-places">Sajek Valley</li>
+        </ul>
+      </section>
     </main>
 
     <script src="./js/25-1_dom.js"></script>
 
     <script>
+      // Video 25-2 start here
+      const student = {
+        name: "Jalal Uddin",
+        Id: 101,
+        study: function (time) {
+          console.log(time, "Study hard");
+        },
+      };
 
-        // Video 25-2 start here
-        const student = {
-            name: "Jalal Uddin", 
-            Id: 101,
-            study: function(time){
-                console.log(time, "Study hard")
-            }
-        }
-        
+      const liCollection = document.getElementsByTagName("li");
+      console.log(liCollection);
 
-        const liCollection = document.getElementsByTagName('li') 
-        console.log(liCollection) ;
-        
-        for(const li of liCollection){
-            // console.log(li)
-            console.log(li.innerText)
-        }
+      for (const li of liCollection) {
+        // console.log(li)
+        console.log(li.innerText);
+      }
 
-        const allHeadings = document.getElementsByTagName('h1') 
+      const allHeadings = document.getElementsByTagName("h1");
 
-        for(const heading of allHeadings){
-            console.log(heading.innerText)
-        }
+      for (const heading of allHeadings) {
+        console.log(heading.innerText);
+      }
 
-        //  Video 25-2 End here
+      //  Video 25-2 End here
 
 
-        // Video 25-1 
-        console.log('Add JavaScript inside HTML File')
+
+
+      // Video 25-3 Start here
+
+      const fruitTitle = document.getElementById("fruits-title"); 
+
+      fruitTitle.innerText = "Fruits I love";
+
+      const places = document.getElementsByClassName("important-places");
+      for (const place of places) {
+        console.log(place)
+        console.log(place.innerText);
+      }
+      // Video 25-3 End here
+
+
+
+      // Video 25-1
+      console.log("Add JavaScript inside HTML File");
     </script>
-
   </body>
 </html>
