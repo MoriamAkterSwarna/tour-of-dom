@@ -1,4 +1,15 @@
- /* Video 25-1  */
+/* Video 25-1  */
 h1 {
   color: lightcoral;
+}
+
+/* 25-6  */
+
+.yellow-bg {
+  /* background-color: yellow !important; */
+
+  text-align: center;
+}
+.large-text {
+  font-size: 2rem;
 }
